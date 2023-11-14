@@ -1,0 +1,131 @@
+.authContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 305px;
+  max-height: 281px;
+  background-size: cover;
+  transition: background-image 0.5s ease;
+}
+@media (min-width: 768px) {
+  .authContainer {
+    width: 500px;
+    height: 1024px;
+  }
+}
+.authContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.logoSvg {
+  width: 54px;
+  height: 54px;
+  background: #8baa36;
+  border-radius: 12px;
+  padding: 16px;
+}
+.logo {
+  fill: #8baa36;
+  stroke: #fafafa;
+  stroke-width: 2;
+  width: 32.27px;
+  height: 32.27px;
+  top: 16.4px;
+  left: 16.4px;
+  border: 3px;
+}
+
+@media (min-width: 768px) {
+  .logoSvg {
+    width: 68px;
+    height: 68px;
+  }
+}
+
+.authTitle {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.02em;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .authTitle {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+}
+.authDescriptions {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  width: 305px;
+}
+@media (min-width: 768px) {
+  .authDescriptions {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    width: 540px;
+    height: 72px;
+  }
+}
+
+.authButtons {
+  display: flex;
+
+  margin-top: 20px;
+}
+
+.diagonalButton {
+  background: transparent;
+  border: 2px solid #fafafa;
+  border-radius: 24px 44px;
+  min-width: 95px;
+  height: 45px;
+  padding: 10px;
+  margin-right: 10px;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+@media (min-width: 768px) {
+  .diagonalButton {
+    height: 67px;
+    min-width: 141px;
+  }
+  .diagonalButtonText {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+.diagonalButtonText {
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.diagonalButton:hover {
+  background: #8baa36;
+  border: none;
+}
