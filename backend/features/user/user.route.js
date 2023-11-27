@@ -13,6 +13,6 @@ router.get("/users", getUsers);
 router.post("/signup", register);
 router.post("/login", login);
 router.post("/logout", authMiddleware, logout);
-
+// hello
 router.get("/verify/:verificationToken", verifyHandler);
 module.exports = router;
