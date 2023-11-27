@@ -11,7 +11,8 @@ import {
   PURGE,
   REGISTER,
 } from 'redux-persist';
-import { categoriesReducer } from 'redux/categories/slice';
+import { categoriesReducer } from './redux/categories/slice';
+import { authReducer } from './redux/user/slice';
 
 const persistConfig = {
   key: 'auth',
@@ -22,6 +23,7 @@ const persistConfig = {
 export const store = configureStore({
   reducer: {
     categories: categoriesReducer,
+    auth: persistReducer(persistConfig, authReducer),
   },
   middleware: getDefaultMiddleware =>
     getDefaultMiddleware({

@@ -1,11 +1,21 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import css from './Navigation.module.css';
-import IconSearch from 'components/IconSearch/IconSearch';
-import { useTheme } from 'components/ToggleSwitch/ThemeContext';
+import IconSearch from '../../components/IconSearch/IconSearch';
+import { useTheme } from '../../components/ToggleSwitch/ThemeContext';
+import { useDispatch } from 'react-redux';
+import { logout } from '../../redux/user/actions';
 
 const Navigation = ({ onClose }) => {
   const { theme } = useTheme();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    await dispatch(logout());
+    navigate('/signin');
+  };
+
   return (
     <nav
       className={`${css.navigation} ${css.navigationMobileMenu} ${
@@ -31,6 +41,7 @@ const Navigation = ({ onClose }) => {
         <IconSearch />
         <span className={css.searchText}>Search</span>
       </NavLink>
+      <button onClick={handleLogout}>Logout</button>
     </nav>
   );
 };

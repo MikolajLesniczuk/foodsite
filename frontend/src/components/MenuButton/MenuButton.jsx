@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import MobileMenuModal from '../MobileMenu/MobileMenu';
 import css from './MenuButton.module.css';
 import sprite from '../../assets/icons/icons.svg';
-import { useTheme } from 'components/ToggleSwitch/ThemeContext';
+import { useTheme } from '../../components/ToggleSwitch/ThemeContext';
 
 const MenuButton = () => {
   const { theme } = useTheme();

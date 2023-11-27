@@ -2,7 +2,10 @@ import { useEffect, useState } from 'react';
 import s from './ingredients.module.css';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchIngredients, fetchOneRecipes } from 'redux/categories/actions';
+import {
+  fetchIngredients,
+  fetchOneRecipes,
+} from '../../../redux/categories/actions';
 
 export const Ingr = () => {
   const { id } = useParams();

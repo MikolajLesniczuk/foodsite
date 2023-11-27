@@ -1,7 +1,7 @@
 import React from 'react';
 import css from './IconSearch.module.css';
 import sprite from '../../assets/icons/icons.svg';
-import { useTheme } from 'components/ToggleSwitch/ThemeContext';
+import { useTheme } from '../../components/ToggleSwitch/ThemeContext';
 
 const IconSearch = () => {
   const { theme } = useTheme();

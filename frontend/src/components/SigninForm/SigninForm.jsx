@@ -2,26 +2,20 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './SigninForm.module.css';
 import icons from '../../assets/icons/icons.svg';
-import { useDispatch, useSelector } from 'react-redux';
-import { logIn } from 'redux/userAPI/actions';
+import { useDispatch } from 'react-redux';
+import { login } from '../../redux/user/actions';
 
 export const SigninForm = () => {
   const dispatch = useDispatch();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
 
   const handleSubmit = e => {
     e.preventDefault();
-    dispatch(logIn({ email, password }));
+    dispatch(login({ email, password }));
     setEmail('');
     setPassword('');
   };
-  if (isLoggedIn) {
-    window.location.href = 'http://localhost:3001/soyummy/main';
-  } else {
-    <SigninForm />;
-  }
 
   return (
     <div>
@@ -57,7 +51,11 @@ export const SigninForm = () => {
             />
           </label>
         </div>
-        <button className={styles.signinButton} type="submit" onClick={logIn}>
+        <button
+          className={styles.signinButton}
+          type="submit"
+          // onClick={logIn}
+        >
           Sign in
         </button>
       </form>

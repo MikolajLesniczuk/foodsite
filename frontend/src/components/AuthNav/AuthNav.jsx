@@ -1,5 +1,6 @@
 import styles from './AuthNav.module.css';
 import icons from '../../assets/icons/icons.svg';
+import { NavLink } from 'react-router-dom';
 
 export const AuthNav = () => {
   return (
@@ -17,16 +18,12 @@ export const AuthNav = () => {
         </p>
 
         <nav className={styles.authButtons}>
-          <button className={styles.diagonalButton}>
-            <a className={styles.diagonalButtonText} href="/soyummy/register">
-              Registration
-            </a>
-          </button>
-          <button className={styles.diagonalButton}>
-            <a className={styles.diagonalButtonText} href="/soyummy/signin">
-              Sign in
-            </a>
-          </button>
+          <NavLink to={`/register`} className={styles.diagonalButton}>
+            <p className={styles.diagonalButtonText}>Registration</p>
+          </NavLink>
+          <NavLink to={`/signin`} className={styles.diagonalButton}>
+            <p className={styles.diagonalButtonText}>Sign in</p>
+          </NavLink>
         </nav>
       </div>
     </div>

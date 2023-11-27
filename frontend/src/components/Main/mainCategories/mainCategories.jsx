@@ -6,7 +6,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import {
   fetchCategoryMeals,
   fetchSomeCategories,
-} from 'redux/categories/actions';
+} from '../../../redux/categories/actions';
 
 import s from './mainCategories.module.css';
 

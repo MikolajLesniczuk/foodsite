@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import styles from './RegisterForm.module.css';
 import icons from '../../assets/icons/icons.svg';
-import { register } from '../../redux/userAPI/actions';
+
 import { useDispatch } from 'react-redux';
+import { register } from '../../redux/user/actions';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -17,7 +18,7 @@ export const RegisterForm = () => {
         password: form.elements.password.value,
       })
     );
-    // form.reset();
+    form.reset();
   };
 
   return (

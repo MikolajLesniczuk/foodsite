@@ -1,4 +1,4 @@
-import { RecipeDetails } from 'components/RecipeDetails/RecipeDetails';
+import { RecipeDetails } from '../../components/RecipeDetails/RecipeDetails';
 import { useParams } from 'react-router-dom';
 
 export const DescriptionPage = () => {
