@@ -1,7 +1,6 @@
 {
   "name": "soyummy",
   "version": "0.1.0",
-  "private": true,
   "homepage": "https://mikolajlesniczuk.github.io/soyummy/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
