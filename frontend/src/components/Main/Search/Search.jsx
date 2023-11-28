@@ -19,7 +19,7 @@ export const Search = () => {
     <div className={s.containerImage}>
       <div className={s.divFlex}>
         <div className={s.soYummy}>
-          <span className={s.so}> So</span>Yummy
+          <span className={s.so}> So</span>Yummmmmmmy
         </div>
         <div className={s.text}>
           "What to cook?" is not only a recipe app, it is, in fact, your
