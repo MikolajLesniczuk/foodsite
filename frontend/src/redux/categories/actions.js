@@ -1,8 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
 import axios from 'axios';
-// axios.defaults.baseURL = 'https://foodsite-virid.vercel.app';
-axios.defaults.baseURL = 'http://localhost:3010';
+axios.defaults.baseURL = 'https://foodsite-virid.vercel.app';
+// axios.defaults.baseURL = 'http://localhost:3010';
 
 export const fetchOneRecipes = createAsyncThunk(
   'fetch/onerecipse',
