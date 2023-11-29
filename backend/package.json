@@ -2,8 +2,8 @@
   "name": "soyummy",
   "version": "0.1.0",
   "scripts": {
-    "start": "node ./server.js",
-    "dev": "nodemon ./server.js",
+    "start": "cross-env NODE_ENV=production node ./server.js",
+    "dev": "cross-env NODE_ENV=development nodemon ./server.js",
     "lint": "eslint **/*.js",
     "lint:fix": "eslint --fix **/*.js"
   },
@@ -22,6 +22,7 @@
     "uuid": "^9.0.1"
   },
   "devDependencies": {
+    "@vercel/node": "^3.0.11",
     "eslint": "7.19.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-standard": "16.0.3",
