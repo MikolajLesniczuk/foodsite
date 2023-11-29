@@ -15,9 +15,9 @@ export const register = createAsyncThunk(
   async (registerData, thunkAPI) => {
     try {
       const response = await axios.post('/soyummy/signup', registerData);
-      setHeader(response.data.user.token);
+      setHeader(response.data.token);
 
-      return response.data.user;
+      return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
@@ -29,9 +29,9 @@ export const login = createAsyncThunk(
   async (loginData, thunkAPI) => {
     try {
       const response = await axios.post('/soyummy/login', loginData);
-      setHeader(response.data.user.token);
+      setHeader(response.data.token);
 
-      return response.data.user;
+      return response.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }
