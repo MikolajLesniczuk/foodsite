@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-
-axios.defaults.baseURL = 'http://localhost:3010/';
+// https: axios.defaults.baseURL = 'http://localhost:3010/';
+axios.defaults.baseURL = 'https://foodsite-virid.vercel.app';
 
 const setHeader = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
