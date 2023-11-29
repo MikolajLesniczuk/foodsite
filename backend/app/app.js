@@ -2,8 +2,8 @@ const express = require("express");
 const logger = require("morgan");
 const cors = require("cors");
 
-const recipeRouter = require("./features/recipe/recipe.route");
-const userRouter = require("./features/user/user.route");
+const recipeRouter = require("../features/recipe/recipe.route");
+const userRouter = require("../features/user/user.route");
 
 const app = express();
 
