@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "engines": {
     "npm": "9.6.1",
-    "node": "18.14.0"
+    "node": "18.x"
   },
   "scripts": {
     "start": "cross-env NODE_ENV=production node ./server.js",
