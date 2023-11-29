@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-// https: axios.defaults.baseURL = 'http://localhost:3010/';
-axios.defaults.baseURL = 'https://foodsite-virid.vercel.app';
+axios.defaults.baseURL = 'http://localhost:3010';
+// axios.defaults.baseURL = 'https://foodsite-virid.vercel.app';
 
 const setHeader = token => {
   axios.defaults.headers.common.Authorization = `Bearer ${token}`;
@@ -15,9 +15,10 @@ export const register = createAsyncThunk(
   async (registerData, thunkAPI) => {
     try {
       const response = await axios.post('/soyummy/signup', registerData);
-      setHeader(response.data.token);
+      console.log(response.data);
+      setHeader(response.data.user.token);
 
-      return response.data;
+      return response.data.user;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
     }

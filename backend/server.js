@@ -1,5 +1,5 @@
 const { serverPort } = require("./config");
-const { app } = require("./app/app");
+const { app } = require("./app");
 const db = require("./dbConfig");
 
 (async () => {
